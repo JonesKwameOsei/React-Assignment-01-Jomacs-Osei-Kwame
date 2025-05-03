@@ -12,7 +12,10 @@ function Test08() {
   ];
   const listItem = fruits.map((fruit) => <li key={fruit.id}>{fruit.name}</li>)
   return (
+    <>
+    <h2>My Favorite Fruits: </h2>
     <ul>{listItem}</ul>
+    </>
   );
 }
 
