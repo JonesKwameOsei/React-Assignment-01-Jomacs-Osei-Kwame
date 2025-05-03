@@ -43,7 +43,7 @@ export default TestO2;
 ```
 
 > Wrongly using `class` instead of `className`.  
-> The Fix: Use `className` instead of `class`.
+> The Fix: I replaced `className` with `class`.
 
 **The Solution:** See `Test02.jsx`. Snippet below:**
 
@@ -339,6 +339,12 @@ function Test10() {
 
 export default Test10;
 ```
+
+---
+
+## Solution Page
+
+![Solution image](image.png)
 
 ---
 
