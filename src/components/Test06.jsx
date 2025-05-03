@@ -2,7 +2,13 @@ function Test06() {
   const showAlert = () => {
     alert("Clicked");
   };
-  return <button onclick="showAlert">Click Me</button>;
+  return (
+    <button
+      onClick={showAlert}
+    >
+      Click Me
+    </button>
+  );
 }
 
 export default Test06;

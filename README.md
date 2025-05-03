@@ -1,135 +1,347 @@
-# 🧪 JSX Practice Assignment
+# 🧪 JSX Practice Assignment Solutions
 
-Welcome to your **JSX Practice Assignment**!  
-This project contains **10 mini challenges** to help you master the core rules and patterns of JSX.
+## 📜 Description
 
-Each test focuses on a different key concept of writing clean, correct JSX code.
+This assignment is a collection of tasks to practice writing JSX.  
+You can find the original assignment [here](https://github.com/Konadu-Akwasi-Akuoko/React-Assignment-01-Jomacs).
 
 ---
 
-## 🚀 How To Start
+## Task 01 Solutions
 
-> **Important**: The below commands will only work in a **Unix-based terminal** (like Git Bash, WSL, or MacOS Terminal). So if you're using **Windows Command Prompt**, please switch to Git Bash. If you are on a Mac or Linux, you can use your default terminal.
+**Task:** The task was to fix `Parent Element` error.
 
-## 1. Clone the Original Repository
+**Solution:** See `Test01.jsx`. Snippet below:
 
-First, **clone** the original assignment repo onto your computer:
+```jsx
+function TestO1() {
+  return (
+    <>
+    <h1>Hello World!</h1>
+    <p>Welcome to React!</p>
+    </>
+  );
+}
 
-```bash
-git clone https://github.com/Konadu-Akwasi-Akuoko/React-Assignment-01-Jomacs.git
+export default TestO1;
 ```
 
-This will create a new folder named **`React-Assignment-01-Jomacs`**.
+> The Fix: To fix the error, I enclosed the JSX elements within **React fragments** `<></>`.
 
 ---
 
-## 2. Move Into the Project Directory
+## Task 02 Solutions
 
-```bash
-cd React-Assignment-01-Jomacs
+**Task:** The task was to Correct the `className` usage. Incorrect code bellow:
+
+```jsx
+function TestO2() {
+  return <h1 class="title">Hello JSX</h1>;
+}
+
+export default TestO2;
 ```
 
----
+> Wrongly using `class` instead of `className`.  
+> The Fix: Use `className` instead of `class`.
 
-## 3. Delete the Existing `.git` Folder
+**The Solution:** See `Test02.jsx`. Snippet below:**
 
-This will **completely remove** the original Git history and connections:
+```jsx
+function TestO2() {
+  return (
+    <h1 className="title">Hello JSX</h1>
+  );
+}
 
-```bash
-rm -r .git
-```
-
-> ⚡ Important: Double-check that you are inside the correct project folder before running this!
-
----
-
-## 4. Create a New Repository on GitHub
-
-- Go to [https://github.com/new](https://github.com/new).
-- **Create a new repository** (give it a name like `React-Assignment-01-Jomacs-YourName`).
-- **Do NOT** initialize it with a README, .gitignore, or License. (Leave them unchecked.)
-
----
-
-## 5. Initialize a New Git Repo Locally
-
-Now inside your project folder (React-Assignment-01-Jomacs), start a **new Git**:
-
-```bash
-git init
-```
-
----
-
-## 6. Add All the Files
-
-```bash
-git add .
-```
-
-This stages everything for your first commit.
-
----
-
-## 7. Make Your First Commit
-
-```bash
-git commit -m "Initial commit for my React JSX Assignment"
+export default TestO2;
 ```
 
 ---
 
-## 8. Connect Your Local Project to Your New GitHub Repo
+## Task 03 Solutions
 
-Now link your local project to the new GitHub repository you just created, using the green Code button on your GitHub repo to copy the HTTPS link. After that add the remote origin:
+**Task:** Add a `Self-Closing Tag`.
+Incorrect code bellow:
 
-```bash
-git remote add origin https://github.com/YourUsername/YourNewRepoName.git
+```jsx
+function Test03() {
+  return (
+    <div>
+      <img src="logo.png" >
+      <p>React Logo</p>
+    </div>
+  );
+}
+
+export default Test03;
+```
+
+> The img tag should be self-closing.  
+> The Fix: I added `/>` to close the tag. The correct code is:
+
+```jsx
+function Test03() {
+  return (
+    <div>
+      <img src="logo.png" />
+      <p>React Logo</p>
+    </div>
+  );
+}
+
+export default Test03;
 ```
 
 ---
 
-## 9. Push Your Code to GitHub
+## Task 04 Solutions
 
-```bash
-git push -u origin main
+**Task:** Fix the for Attribute `(use htmlFor)`.
+
+Incorrect code bellow:
+
+```jsx
+function Test04() {
+  return (
+    <div>
+      <label for="email">Email:</label>
+      <input type="text" id="email" />
+    </div>
+  );
+}
+
+export default Test04;
 ```
 
-> If you get an error because the branch is named `master` instead of `main`, you can rename it:
+> The Fix: I replaced `for` with the right JSX attribute `htmlFor`. The correct code is:
 
-```bash
-git branch -M main
-git push -u origin main
+```jsx
+function Test04() {
+  return (
+    <div>
+      <label htmlFor="email">Email:</label>
+      <input type="text" id="email" />
+    </div>
+  );
+}
+
+export default Test04;
 ```
 
 ---
 
-### 🎯 After Doing This
+## Task 05 Solutions
 
-You now have your **own clean version** of the assignment — ready to work on and submit!
+**Task:** Insert a JavaScript Variable using `{}`.
+
+Incorrect code bellow:
+
+```jsx
+function Test05() {
+  const user = "Akwasi";
+  return <h1>Welcome user</h1>;
+}
+
+export default Test05;
+```
+
+> The Fix: I inserted the variable using `{}`. The correct code is:
+
+```jsx
+function Test05() {
+  const user = "Akwasi";
+  return <h1>Welcome {user}</h1>; // The variable was inserted here.
+}
+
+export default Test05;
+```
 
 ---
 
-## ✏️ Your Tasks
+## Task 06 Solutions
 
-| Test File    | Task Description                                  |
-| ------------ | ------------------------------------------------- |
-| `Test01.jsx` | Fix the Parent Element Error                      |
-| `Test02.jsx` | Correct the `className` Usage                     |
-| `Test03.jsx` | Add a Self-Closing Tag                            |
-| `Test04.jsx` | Fix the `for` Attribute (use `htmlFor`)           |
-| `Test05.jsx` | Insert a JavaScript Variable using `{}`           |
-| `Test06.jsx` | Correct Attribute Name to CamelCase               |
-| `Test07.jsx` | Use a Ternary Expression Inside JSX               |
-| `Test08.jsx` | Write JSX to Display a Simple List                |
-| `Test09.jsx` | Render a Button with Dynamic Text                 |
-| `Test10.jsx` | Use Logical AND (`&&`) to Conditionally Show Text |
+**Task:** Correct Attribute Name to `CamelCase`.
+
+Incorrect code bellow:
+
+```jsx
+function Test06() {
+  const showAlert = () => {
+    alert("Clicked");
+  };
+  return <button onclick="showAlert">Click Me</button>;
+}
+
+export default Test06;
+```
+
+> The Fix: I replaced `onclick` with `onClick`. The correct code is:
+
+```jsx
+function Test06() {
+  const showAlert = () => {
+    alert("Clicked");
+  };
+  return (
+    <button
+      onClick={showAlert}
+    >
+      Click Me
+    </button>
+  );
+}
+
+export default Test06;
+```
 
 ---
 
-## 📤 After Completing
+## Task 07 Solutions
 
-When you finish the assignment, push your code to your new GitHub repository.
-Make sure to **commit your changes** regularly as you work on the tasks.
-After pushing to your new repository, **send me the link** to your GitHub repo!  
-Good luck — And happy hacking! 🚀
+**Task:** Use a `Ternary Expression` Inside JSX.
+
+Incorrect code bellow:
+
+```jsx
+function Test07() {
+  const isLoggedIn = false;
+
+  return <h1>Welcome back!</h1>;
+}
+
+export default Test07;
+```
+
+> The Fix: I used a ternary expression inside JSX. The correct code is:
+
+```jsx
+function Test07() {
+  const isLoggedIn = false;
+
+  return (
+    <h1>{!isLoggedIn ? 'Please login'
+      : 'Welcome back!'}</h1> // The ternary expression was inserted here.
+  );
+}
+
+export default Test07;
+```
+
+---
+
+## Task 08 Solutions
+
+**Task:** Write JSX to Display a Simple List.
+
+Starter code bellow:
+
+```jsx
+function Test08() {
+  return (
+    // Your code here
+  );
+}
+
+export default Test08;
+```
+
+> The Fix: See `Test08.jsx`. Snippet below:
+
+```jsx
+function Test08() { 
+  const fruits = [
+    { id: 1, name: "Apple" },
+    { id: 2, name: "Banana" },
+    { id: 3, name: "Orange" },
+  ];
+  const listItem = fruits.map((fruit) => <li key={fruit.id}>{fruit.name}</li>)
+  return (
+    <ul>{listItem}</ul>
+  );
+}
+
+export default Test08;
+```
+
+---
+
+## Task 09 Solutions
+
+**Task:** Render a `Button with Dynamic Text`.
+
+Starter code bellow:
+
+```jsx
+function Test09() {
+  const name = "Jomacs";
+
+  return (
+    // Your code here
+  );
+}
+
+export default Test09;
+```
+
+> The Fix: See `Test09.jsx`. Snippet below:
+
+```jsx
+function Test09() {
+  const name = "Jomacs";
+
+  const handleClick = () => {
+    alert(`Clicked ${name}`)
+  }
+
+  return (
+    // Your code here
+    <button onClick={handleClick}>Click {name}</button>
+  );
+}
+
+export default Test09;
+```
+
+---
+
+## Task 10 Solutions
+
+**Task:** Use Logical `AND (&&)` to Conditionally Show Text.
+
+Starter code bellow:
+
+```jsx
+function Test10() {
+  const isAdmin = true;
+
+  return (
+    // Your code here
+  );
+}
+
+export default Test10;
+```
+
+> The Fix: See `Test10.jsx`. Snippet below:
+
+```jsx
+function Test10() {
+  const isAdmin = true;
+
+  return (
+    // Your code here
+    <h2>
+      {isAdmin && 'Admin Panel'}
+    </h2>
+  );
+}
+
+export default Test10;
+```
+
+---
+
+## Conclusion
+
+This assignment was a good exercise to practice writing JSX. I have enjoyed it! Also, learned a lot about React and JSX syntax.
